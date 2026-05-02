@@ -1,0 +1,151 @@
+{
+  "version": "2.1",
+  "timezone": "Asia/Shanghai",
+  "feishu_space_id": "7634989077812480986",
+  "lark_cli": "npx @larksuite/cli",
+
+  "systems": {
+    "full_stack": {
+      "name": "灵枢·AI全栈构建师",
+      "source_dir": ".claude/skills/code/full-stack-architect",
+      "backup_dir": "更新/灵枢·AI全栈构建师",
+      "github_repo": "full-stack-architect",
+      "feishu_parent_title": "灵枢·AI全栈构建师",
+      "exclude_patterns": ["__pycache__", "*.pyc", ".DS_Store", "test_report_*.json"],
+      "sections": [
+        {"key": "ai-models", "title": "AI模型引擎", "desc": "代码生成、文本生成、模型管理"},
+        {"key": "code-generator", "title": "代码生成器", "desc": "代码引擎与质量检查"},
+        {"key": "nlp", "title": "NLP模块", "desc": "对话管理、实体提取、意图识别"},
+        {"key": "prd-modules", "title": "PRD系统", "desc": "产品需求文档生成与检查"},
+        {"key": "tech-stack", "title": "技术栈推荐", "desc": "技术数据库与趋势分析"},
+        {"key": "references", "title": "知识参考库", "desc": "全栈开发最佳实践参考（19个领域）"},
+        {"key": "integrations", "title": "集成模块", "desc": "ADK运行时、平台适配器"}
+      ]
+    },
+    "lingshu": {
+      "name": "灵枢·AI影视系统",
+      "source_dir": ".claude/skills/creative/lingshu",
+      "backup_dir": "更新/灵枢·AI影视系统",
+      "github_repo": "lingshu-ai-director",
+      "feishu_parent_title": "灵枢·AI影视系统",
+      "exclude_patterns": ["__pycache__", "*.pyc", ".DS_Store"],
+      "departments": {
+        "DOP": {"name": "摄影", "prefix": "DOP_", "domain": "镜头语言、焦段、光圈、运动轨迹"},
+        "PD": {"name": "美术", "prefix": "PD_", "domain": "场景构建、材质语言、色彩体系、空间叙事"},
+        "LD": {"name": "灯光", "prefix": "LD_", "domain": "光比控制、灯位逻辑、色温策略、氛围塑造"},
+        "CD": {"name": "服装", "prefix": "CD_", "domain": "角色视觉、面料叙事、时代考据、色彩编码"},
+        "MU": {"name": "妆发", "prefix": "MU_", "domain": "角色造型、年代还原、特效化妆、符号表达"},
+        "SO": {"name": "声音", "prefix": "SO_", "domain": "空间声场、拟音设计、对白处理、情绪频率"},
+        "ED": {"name": "剪辑", "prefix": "ED_", "domain": "节奏控制、蒙太奇逻辑、转场策略、时空重组"},
+        "VFX": {"name": "视效", "prefix": "VFX_", "domain": "合成逻辑、粒子系统、数字替身、环境构建"},
+        "MX": {"name": "音乐", "prefix": "MX_", "domain": "情绪引导、主题动机、声画对位、静默设计"},
+        "ALL": {"name": "通用", "prefix": "ALL_", "domain": "跨部门通用知识、工作流规范"}
+      },
+      "subsystems": [
+        {
+          "key": "lingshu-creative-assistant",
+          "title": "灵枢·创作助手",
+          "desc": "剧本改编、分镜设计、Prompt工程、风格锁定、全流程AI工具链",
+          "kb_file": "references/knowledge-base.md",
+          "style_lib": "references/global-style-library.md",
+          "skill_count": 68
+        },
+        {
+          "key": "lingshu-director-pro",
+          "title": "灵枢·导演Pro",
+          "desc": "导演思维引擎、九大部门知识图谱、MCP网关",
+          "kb_file": "scripts/knowledge_base.json"
+        },
+        {
+          "key": "lingshu-platform-bridge",
+          "title": "灵枢·平台桥",
+          "desc": "ADK运行时、导演Avatar、女娲Skill读取器"
+        },
+        {
+          "key": "lingshu-hotspot-aggregator",
+          "title": "灵枢·热点聚合",
+          "desc": "新闻热点聚合平台"
+        }
+      ],
+      "creative_departments": [
+        {"key": "directors", "title": "导演视角库", "desc": "全球经典导演风格蒸馏", "count": 18},
+        {"key": "cinematographers", "title": "摄影师视角库", "desc": "顶级摄影指导技法", "count": 10},
+        {"key": "editors", "title": "剪辑师视角库", "desc": "剪辑大师风格与技法", "count": 10},
+        {"key": "composers", "title": "作曲家视角库", "desc": "配乐大师风格与技法", "count": 10},
+        {"key": "screenwriters", "title": "编剧视角库", "desc": "编剧大师叙事技法", "count": 10},
+        {"key": "production-designers", "title": "美术指导视角库", "desc": "美术设计大师风格", "count": 10}
+      ]
+    }
+  },
+
+  "people_library": {
+    "standard_format": {
+      "files": ["01-writings.md", "02-conversations.md", "03-expression-dna.md", "04-external-views.md", "05-decisions.md", "06-timeline.md"],
+      "description": "人物视角库标准6文件格式：著作→对话→表达DNA→外部评价→决策→时间线"
+    },
+    "categories": {
+      "business": {
+        "title": "商业/投资人物",
+        "people": ["elon-musk", "munger", "naval", "paul-graham", "steve-jobs", "sun-yuchen", "zhang-yiming"]
+      },
+      "tech": {
+        "title": "科技/AI人物",
+        "people": ["andrej-karpathy", "ilya-sutskever"]
+      },
+      "thinkers": {
+        "title": "思想/教育人物",
+        "people": ["feynman", "taleb", "zhangxuefeng"]
+      },
+      "media": {
+        "title": "媒体/内容人物",
+        "people": ["mrbeast", "trump", "x-mastery-mentor"]
+      }
+    }
+  },
+
+  "search_sources": [
+    {
+      "name": "arXiv",
+      "domain": "arxiv.org",
+      "queries": ["AI agent framework", "LLM research paper", "multi-agent system"],
+      "target_system": "full_stack"
+    },
+    {
+      "name": "GitHub",
+      "domain": "github.com",
+      "queries": ["AI agent framework", "code architecture best practice", "ComfyUI workflow"],
+      "target_system": "full_stack"
+    },
+    {
+      "name": "Hugging Face",
+      "domain": "huggingface.co",
+      "queries": ["text to video model", "AI filmmaking tool", "image generation model"],
+      "target_system": "lingshu"
+    },
+    {
+      "name": "魔搭社区",
+      "domain": "modelscope.cn",
+      "queries": ["AI视频生成", "AI影视工具", "ComfyUI工作流"],
+      "target_system": "lingshu"
+    }
+  ],
+
+  "exclude_from_backup": [
+    "episode_*.txt",
+    "项目/",
+    "*.pyc",
+    "__pycache__",
+    ".DS_Store",
+    "test_report_*.json",
+    "prd-*.json",
+    "prd-*.md"
+  ],
+
+  "exclude_from_upload": [
+    "episode_*.txt",
+    "项目/",
+    "应用/",
+    "工具/",
+    "CleanShot_X_中文补丁/"
+  ]
+}

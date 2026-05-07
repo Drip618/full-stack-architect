@@ -1,161 +1,62 @@
-# 🏗️ 灵枢·AI全栈构建师 (Lingshu Full-Stack Architect)
+# 灵枢·AI全栈构建师 (Full-Stack Architect)
 
-<p align="center">
-  <strong>AI驱动的全栈开发指导Agent</strong> · 集成ADK/Agent Runtime · 从需求到代码的完整链路
-</p>
+> 专业的全栈开发指导Agent，集成ADK/Agent Runtime和女娲风格蒸馏能力
 
-<p align="center">
-  <a href="#-功能特性">功能</a> •
-  <a href="#-模块架构">架构</a> •
-  <a href="#-目录结构">目录</a> •
-  <a href="#-快速开始">开始</a> •
-  <a href="#-隐私声明">隐私</a>
-</p>
+## 📋 仓库说明
 
----
+| 项目 | 内容 |
+|------|------|
+| **用途** | AI驱动的全栈开发架构系统，涵盖需求分析到代码生成的完整链路 |
+| **隐私** | ✅ 可公开 |
+| **语言** | Python / JavaScript / TypeScript |
+| **许可证** | MIT |
 
-## ✨ 功能特性
+## 🏗️ 包含模块
 
-- **🤖 AI模型引擎** — 多模型管理（代码生成/文本生成/LLM调度）
-- **⚡ 代码生成器** — 智能代码引擎 + 质量检查
-- **🧠 NLP模块** — 对话管理 / 实体提取 / 意图识别
-- **📋 PRD系统** — 产品需求文档自动生成、检查、执行（含6大行业模板）
-- **🔧 技术栈推荐** — 智能技术选型 + 趋势分析
-- **📚 知识参考库** — 19个领域最佳实践（前端/后端/数据库/安全/DevOps等）
-- **🔗 ADK运行时** — Agent Runtime + 多平台适配器
-- **🌐 Web界面** — 可视化交互控制台
+### 核心引擎
+- **AI模型引擎** (`ai-models/`) — 代码生成、文本生成、模型管理
+- **代码生成器** (`code-generator/`) — 代码引擎与质量检查
+- **NLP模块** (`nlp/`) — 对话管理、实体提取、意图识别
 
-## 🏗️ 模块架构
+### 产品与架构
+- **PRD系统** (`prd-modules/`) — PRD生成、检查、执行
+- **技术栈推荐** (`tech-stack/`) — 技术数据库与趋势分析
+- **知识参考库** (`references/`) — 19个领域最佳实践
 
-```
-┌─────────────────────────────────────────────┐
-│              灵枢·AI全栈构建师               │
-├──────────┬──────────┬──────────┬────────────┤
-│ AI模型引擎 │ 代码生成器 │ NLP模块   │ PRD系统    │
-│          │          │          │            │
-│ LLM调度   │ 引擎+质检 │ 对话/实体 │ 生成/检查  │
-│ 模型管理  │          │ 意图识别  │ 执行       │
-├──────────┴──────────┴──────────┴────────────┤
-│         技术栈推荐 + 知识库(19领域)           │
-├─────────────────────────────────────────────┤
-│     ADK运行时 (Agent Runtime)                │
-│     ┌─────────┐ ┌─────────┐ ┌──────────┐   │
-│     │Avatar   │ │Platform │ │Framework │   │
-│     │Controller│ │Adapter  │ │Enhance   │   │
-│     └─────────┘ └─────────┘ └──────────┘   │
-├─────────────────────────────────────────────┤
-│              Web Interface                   │
-└─────────────────────────────────────────────┘
-```
+### 集成与运行时
+- **ADK运行时** (`integrations/`) — Agent运行时、平台适配器
+- **Web界面** (`web-interface/`) — 前端交互界面
 
 ## 📁 目录结构
 
 ```
-.claude/skills/
-├── code/
-│   └── full-stack-architect/      # ← 核心入口
-│       ├── SKILL.md               # Skill主文件（Agent入口）
-│       ├── ai-models/             # AI模型引擎
-│       │   ├── code_generation.py
-│       │   ├── model_manager.py
-│       │   └── text_generation.py
-│       ├── code-generator/        # 代码生成器
-│       │   ├── code_engine.py
-│       │   └── code_quality.py
-│       ├── nlp/                   # NLP模块
-│       │   ├── dialogue_manager.py
-│       │   ├── entity_extraction.py
-│       │   └── intent_recognition.py
-│       ├── prd-modules/           # PRD系统
-│       │   ├── prd-generator.md
-│       │   ├── prd-checker.md
-│       │   ├── story-executor.md
-│       │   └── templates/         # 6个行业模板
-│       │       ├── ecommerce.md
-│       │       ├── education.md
-│       │       ├── fintech.md
-│       │       ├── gaming.md
-│       │       ├── healthcare.md
-│       │       └── saas.md
-│       ├── tech-stack/            # 技术栈推荐
-│       │   ├── recommendation_algorithm.py
-│       │   ├── tech_database.json
-│       │   └── trends_analyzer.py
-│       ├── references/            # 知识库(19领域)
-│       │   ├── frontend_*.md      # 前端系列(6)
-│       │   ├── backend_*.md       # 后端系列(5)
-│       │   ├── database_*.md      # 数据库
-│       │   ├── security_*.md      # 安全
-│       │   └── ...
-│       ├── integrations/          # ADK运行时
-│       │   ├── adk_agent_runtime.py
-│       │   ├── avatar_controller.py
-│       │   ├── platform_adapters.py
-│       │   └── framework_enhancements.py
-│       ├── scripts/               # 工具脚本
-│       ├── web-interface/         # Web界面
-│       ├── knowledge_index.json   # 知识图谱索引
-│       └── requirements.txt
-├── prd-context/                   # PRD上下文与历史
-│   ├── conventions/
-│   └── prd-files/
-├── docs/                          # 配置与规则
-│   ├── daily_update_config.json
-│   └── KNOWLEDGE_UPDATE_RULES.md
-├── INDEX.md                       # 全局索引
-└── README.md                      # 本文件
+.claude/skills/code/full-stack-architect/
+├── SKILL.md                    # Skill主文件
+├── ai-models/                  # AI模型引擎
+├── code-generator/             # 代码生成器
+├── nlp/                        # NLP模块
+├── prd-modules/                # PRD系统
+│   └── templates/              # 行业模板(电商/教育/金融等)
+├── tech-stack/                 # 技术栈数据库
+├── references/                 # 知识库(19领域)
+├── integrations/               # ADK运行时
+├── scripts/                    # 工具脚本
+└── web-interface/              # Web界面
 ```
-
-## 🚀 快速开始
-
-### 前置要求
-
-- Python 3.10+
-- Node.js 18+ (Web界面)
-
-### 安装
-
-```bash
-# 克隆仓库
-git clone https://github.com/Drip618/full-stack-architect.git
-
-# 安装Python依赖
-cd full-stack-architect/.claude/skills/code/full-stack-architect
-pip install -r requirements.txt
-```
-
-### 使用方式
-
-本仓库作为 **TRAE/Claude Code Skill** 使用，自动被IDE加载：
-
-1. 将仓库克隆到 `.claude/skills/code/` 目录
-2. 启动 TRAE 或 Claude Code
-3. 直接对话即可调用全栈构建能力
 
 ## 🔒 隐私声明
 
-| 内容 | 状态 |
-|------|------|
-| 本仓库全部内容 | ✅ **可公开** |
-| 影视/剧组相关 | ❌ 不包含（→ [lingshu-ai-director](https://github.com/Drip618/lingshu-ai-director)） |
-| 用户项目数据 | ❌ 不包含 |
+本仓库仅包含**通用型全栈开发知识**，不包含：
+- ❌ 影视/剧组相关内容（→ [lingshu-ai-director](https://github.com/Drip618/lingshu-ai-director)）
+- ❌ 用户项目文件
+- ❌ 私密配置信息
 
 ## 📊 版本信息
 
-| 项目 | 值 |
-|------|-----|
-| **版本** | v2.0 |
-| **许可证** | MIT |
-| **语言** | Python 37.9% / JavaScript 37.5% / CSS 22.6% |
-| **维护者** | [@Drip618](https://github.com/Drip618) |
-| **最后更新** | 2026-05-02 |
-
-## 📄 许可证
-
-本项目基于 [MIT License](.claude/skills/code/full-stack-architect/LICENSE) 开源。
+- **当前版本**: v2.0
+- **最后更新**: 2026-05-02
+- **维护者**: Drip618
 
 ---
 
-<p align="center">
-  <sub>遵循 <a href=".trae/rules/project_rules.md">灵枢核心铁律 v1.0</a> 管理 · 违反铁律 = 严重错误</sub>
-</p>
+*本仓库遵循[灵枢核心铁律](../.trae/rules/project_rules.md)管理*

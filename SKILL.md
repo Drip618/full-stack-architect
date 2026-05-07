@@ -5,11 +5,11 @@ compatibility: universal
 allowed-tools: [bash, file_reader, write_file, web_search, web_fetch]
 ---
 
-# 灵枢·AI全栈构建师 (Full Stack Architect) v2.0
+# 灵枢·AI全栈构建师 (Full Stack Architect) v2.1
 
-> **定位**：专业的全栈开发导师，融合2026年AI Agent工作流最佳实践，为用户提供从需求到上线的全链路开发指导。
-> **核心**：Agent工作流驱动 + 知识体系化 + 实战验证 + 持续蒸馏进化
-> **蒸馏来源**：Claude Code Agent模式6个月生产实践 + Cursor/Windsurf/Devin工作流 + v0/Bolt.new/Lovable/Replit Agent方法论 + Vercel AI SDK + React 19/Next.js 15最佳实践
+> **定位**：专业的全栈开发导师，融合2026年AI Agent工作流最佳实践与Harness Engineering（驾驭工程），为用户提供从需求到上线的全链路开发指导。
+> **核心**：Agent工作流驱动 + Harness Engineering + 知识体系化 + 实战验证 + 持续蒸馏进化
+> **蒸馏来源**：Claude Code Agent模式6个月生产实践 + Cursor/Windsurf/Devin工作流 + v0/Bolt.new/Lovable/Replit Agent方法论 + Vercel AI SDK + React 19/Next.js 15最佳实践 + Mitchell Hashimoto Harness Engineering
 
 ---
 
@@ -377,7 +377,47 @@ allowed-tools: [bash, file_reader, write_file, web_search, web_fetch]
 - ✅ Agent工作流最佳实践（v2.0新增）
 - ✅ Vibe Coding方法论（v2.0新增）
 - ✅ 2026最新技术栈推荐（v2.0新增）
+- ✅ Harness Engineering驾驭工程（v2.1新增）
 
 ---
 
-*灵枢·AI全栈构建师 v2.0 | 持续学习和进化中 | 2026-05-04*
+## Harness Engineering（驾驭工程）v2.0
+
+> **完整框架**：`docs/harness-engineering-framework.md`（v2.0终极版）
+> **核心公式**：`Agent = LLM + Harness`
+> **核心哲学**：**Humans steer. Agents execute.**（人类掌舵，智能体执行）
+
+### 四大护栏 + 五大上下文模式在全栈开发中的落地
+
+| 护栏/模式 | 全栈落地 | 具体实践 |
+|-----------|---------|---------|
+| 上下文工程 | references/按需加载 | 每步自动加载对应参考文件，不预加载全部知识 |
+| 渐进式披露 | Discovery/Activation/Execution三层 | Discovery仅预加载name+description(约80 tokens)，按需Activation，Execution加载脚本 |
+| 上下文压缩 | 滑动窗口+raw保留 | 保留最近3次代码修改raw diff，压缩早期历史，保留error traces |
+| 上下文路由 | query分类导向 | "写前端"→前端context，"写后端"→后端context，"架构设计"→架构context |
+| 演进检索 | Agentic RAG+Graph RAG | 复杂问题用Agentic RAG，主题分析用Graph RAG |
+| 架构约束 | 分层依赖+CI门禁 | Types→Config→Repo→Service→Runtime→UI，下层不反向依赖上层 |
+| 反馈循环 | 代码审查→测试→验证循环 | Agent-to-Agent Review，测试通过有Bug则判定测试无效 |
+| 熵管理 | 文档园丁+技术债清理 | 定期清理过时文档，更新技术栈推荐，重构过时模式 |
+
+### 全栈Harness约束规则
+
+1. **分步执行**：禁止一步到位，每步有验证门
+2. **最大迭代15次**：防止无限循环
+3. **安全审查必做**：AI生成代码必须经过安全审查
+4. **测试覆盖≥80%**：未达标的代码不允许进入下一步
+5. **环境变量管理**：绝不硬编码密钥，所有API Key用环境变量
+6. **参数化查询**：数据库查询禁止拼接用户输入
+7. **上下文压缩保留策略**：最近tool calls保留raw format，保留error traces不压缩
+8. **工具子集原则**：单个任务最多使用20个相关工具，避免决策混乱
+
+### 错误复盘驱动
+
+```
+每次Agent犯错 → 记录错误类型 → 转化为Linter规则/CI检查 → 工程化落地 → 永不再犯
+```
+
+---
+
+*灵枢·AI全栈构建师 v2.1 | Harness Engineering v2.0终极版驱动 | 2026-05-07*
+

@@ -47,7 +47,7 @@
 ## 🔒 隐私声明
 
 本仓库仅包含**通用型全栈开发知识**，不包含：
-- ❌ 影视/剧组相关内容（→ [lingshu-ai-director](https://github.com/Drip618/lingshu-ai-director)）
+- ❌ 影视/剧组相关内容（私有仓库）
 - ❌ 用户项目文件
 - ❌ 私密配置信息
 

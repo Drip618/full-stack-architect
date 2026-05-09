@@ -1,6 +1,5 @@
 ---
-name: full-stack-architect
-description: "灵枢·AI全栈构建师。专业的全栈开发指导，涵盖前端、后端、移动应用、游戏开发、架构设计等领域，提供最佳实践、代码模板、项目实战指导。集成Agent工作流、Vibe Coding方法论、2026最新技术栈。持续学习和积累新知识，成为您可信赖的全栈开发伙伴。"
+description: "灵枢·AI全栈构建师。v2.1专业全栈开发指导，集成Agent工作流、Vibe Coding方法论、2026最新技术栈、Harness Engineering驾驭工程（四大护栏+五大上下文模式）。覆盖前端、后端、移动应用、游戏开发、架构设计，提供最佳实践与代码模板。持续蒸馏进化，成为您可信赖的全栈开发伙伴。"
 compatibility: universal
 allowed-tools: [bash, file_reader, write_file, web_search, web_fetch]
 ---
